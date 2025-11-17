@@ -6,12 +6,15 @@ body {
 }
 
 .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);  /* 2 kolumny */
+  grid-template-rows: repeat(3, auto);    /* 3 wiersze */
   gap: 15px;
-  margin-top: 30px;
+  max-width: 400px;    /* żeby ładnie wyglądało na telefonie */
+  margin: 30px auto;
+  padding: 10px;
 }
+
 
 button {
   width: 120px;
