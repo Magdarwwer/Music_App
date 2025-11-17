@@ -6,15 +6,12 @@ body {
 }
 
 .buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);  /* 2 kolumny */
-  grid-template-rows: repeat(3, auto);    /* 3 wiersze */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 15px;
-  max-width: 400px;    /* żeby ładnie wyglądało na telefonie */
-  margin: 30px auto;
-  padding: 10px;
+  margin-top: 30px;
 }
-
 
 button {
   width: 120px;
@@ -37,4 +34,19 @@ button {
 button:active {
   transform: scale(0.95);
   opacity: 0.8;
+}
+
+@media (max-width: 600px) {
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    gap: 15px;
+    max-width: 400px;
+  }
+
+  button {
+    width: 100%;
+    aspect-ratio: 1;
+  }
 }
